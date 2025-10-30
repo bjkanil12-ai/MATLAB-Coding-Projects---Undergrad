@@ -78,10 +78,3 @@ The report details the design calculations, operating conditions, and final dime
 * **Conversion:** Both reactors meet the >85% conversion requirement for propylene (PBR: 88.7%, FBR: 90.0%)[cite: 3076, 3219].
 * **Dimensions:** The PBR is more compact (Height: 6m, Diameter: 3.327m) than the FBR (Height: 7m, Diameter: 4.133m), making it better for retrofitting existing plants[cite: 3071, 3254, 3360].
 * **Trade-off:** The PBR's main disadvantage is requiring significantly more cooling tubes (**9,429**) than the FBR (**1,862**) to achieve the necessary heat transfer[cite: 3078, 3254].
-
-### MATLAB Methodology
-* All calculations for both reactor designs were performed using MATLAB[cite: 3068, 3105].
-* The `ode45` solver was used to solve a system of ODEs derived from **mole balances** (Eq. 4-9) to determine the flowrate profiles of all components along the reactor volume (`V`)[cite: 3131, 3531, 3767].
-* For the **PBR (non-isothermal)**, an **energy balance** (Eq. 10) was solved simultaneously with the mole balances to model the temperature change down the reactor [cite: 3113, 3181, 3908-3911]. The FBR was modeled as **isothermal**[cite: 3112].
-* The scripts (detailed in the appendix [cite: 3414, 3665]) used an **iterative, trial-and-error** approach. [cite_start]Variables like the inert Nitrogen flow rate were adjusted until the design constraints (e.g., production target, conversion, superficial velocity) were met[cite: 3106, 3107].
-* Final flowrates were used to calculate the heat load (`Q`), Log Mean Temperature Difference (`LMTD`), and the required heat transfer area (`A_ht`), which in turn determined the number of tubes and final shell diameter[cite: 3224, 3226, 3231, 3236, 3567, 3576, 3814].g
